@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+	<meta charset="UTF-8">
+	<title>Nomas kalkulators</title>
+	<meta name="description" content="">
+	<link rel="stylesheet" href="/calculator.CSS">
+	<script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/slim-select@latest/dist/slimselect.css" />
+</head>
+<body>
+	<section class="calculator">
+		<div class="container">
+			<form method="post" class="calculator-form">
+				<input id="current" type="hidden" name="current" value="payment">
+				<div id="inner">
+				</div>
+				<div class="tooltip">
+					<i class="fas fa-info-circle"></i>
+				</div>
+				<h3 class="calculator-title">Nomas kalkulators</h3>
+				<div class='inside-form'>
+					<div>
+						<label class='price' for="cc_price">Cena:</label>
+						<input id="cc_price" class="calculator-input" type="text" name="cc_price" required>
+					</div>
+					<div>
+						<label for="cc_deposit">Pirmā iemaksa:</label>
+						<input id="cc_deposit" class="calculator-input" type="text" name="cc_deposit" required>
+						<select id="cc_deposit_type" class="calculator-select" name="cc_deposit_type">
+							<option value="percent" selected>%</option>
+							<option value="value">Eur</option>
+						</select>
+					</div>
+					<div>
+						<label for="cc_remaining">Atlikusī vērtība:</label>
+						<input id="cc_remaining" class="calculator-input" type="text" name="cc_remaining" required>
+						<select id="cc_remaining_type" class="calculator-select" name="cc_remaining_type">
+							<option value="percent" selected>%</option>
+							<option value="value">Eur</option>
+						</select>
+					</div>
+					<div>
+						<label class='periods' for="cc_period">Periods:</label>
+						<select id="cc_period" class="calculator-select" name="cc_period">
+							<option value="12">1 gads</option>
+							<option value="24">2 gadi</option>
+							<option value="36">3 gadi</option>
+							<option value="48">4 gadi</option>
+							<option value="60" selected>5 gadi</option>
+						</select>
+					</div>
+					<div>
+						<div>
+							<label class='veids'>Nomas transportlīdzekļa veids:</label>
+						</div>
+						<select id="cc_percent" class="calculator-select" onChange="changeType()">
+							<option value="17" selected>Jauns</option>
+							<option value="18">Lietots</option>
+							<option value="20">Paaugstināta riska*</option>
+						</select>
+					</div>
+					<div>
+						<div hidden class="c"><label>Līzinga veids:</label>
+							<select id="cc_type" onChange="javascript:changeType();">
+								<option value="finance">finanšu</option>
+								<option value="operative" selected="selected">operatīvais</option>
+							</select>
+						</div>
+					</div>
+					<div>
+						<button id="submit" class="calculator-button">Aprēķināt</button>
+					</div>
+					<div class='last'>
+						<label>Ikmēneša maksa:</label>
+						<input id="cc_payment" class="text readonly" type="text" value="" readonly="readonly" />
+						<div>
+						</div>
+						<div class="r" style="visibility: hidden;">
+							<div class="c"><label>Procenti:</label></div>
+							<div class="c"><input id="cc_percent" class="text percent" type="text" value="" /></div>
+						</div>
+					</div>
+				</div>
+		</div>
+		</div>
+		</form>
+		</div>
+	</section>
+	<script src="https://www.hyundai.ee/luminor-calc/assets/jquery-1.9.1.min.js"></script>
+	<script src="https://www.hyundai.ee/luminor-calc/assets/jquery.filter_input.js"></script>
+	<script src="/calculator.JS"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	background-color: #f9f9f9;
+}
+.container {
+	width: 1140px;
+	margin: 0 auto;
+}
+.calculator-form {
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 60px;
+	text-align: center;
+	margin-bottom: 60px;
+	background-color: #fff;
+	border-radius: 20px;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.315);
+}
+
+select {
+	margin-top: 5px;
+	text-align: center;
+	font-variant-numeric: lining-nums;
+	letter-spacing: 0.1ch;
+	border-radius: 4px;
+	background-color: field;
+	cursor: text;
+}
+
+
+input {
+	width: 100px;
+	text-align: center;
+	letter-spacing: 0.1ch;
+	border-radius: 4px;
+	background-color: field;
+	cursor: text;
+	outline: " rounded: " attr(data-number, number, 2);
+}
+.text.readonly {
+	width: 100px;
+	line-height: 25px;
+	font-size: 17px;
+	font-weight: 600;
+}
+
+	.calculator-form p {
+	margin-top: 30px;
+	font-size: 18px;
+	}
+	
+	.calculator-form button {
+	margin-top: 20px;
+	padding: 10px 20px;
+	font-size: 18px;
+	background-color: #3daa3d;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	}
+	
+	.calculator-form button:hover {
+	background-color: #0c0c0c;
+	}
+.price {
+	padding-right: 76px;
+}
+.periods {
+	padding-right: 57px;
+}
+	.last {
+		margin-top: 15px;
+	}
+	.inside-form {
+		margin-left: 55px;
+		width: 400px;
+		text-align: left;
+	}
+	#tolltipCallout{
+		cursor: help;
+		color: #004e7e;
+	}
+	#tooltip{
+		position: absolute;
+		background: #fff;
+		z-index: 9999;
+		font-size: 11px;
+		padding: 5px;
+		width: 180px;
+		border: 1px solid #dcdcdc;
+		top: 30px;
+		display: none;
+	}
+	#inner{
+		position: absolute;
+	}
